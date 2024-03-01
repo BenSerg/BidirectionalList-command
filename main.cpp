@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include "BidirectionalList.h"
-#include "ListsCommandMaker.h"
+#include "data_structures/BidirectionalList.h"
+#include "commands/ListsCommandMaker.h"
 
 int main(int argc, char** argv)
 {

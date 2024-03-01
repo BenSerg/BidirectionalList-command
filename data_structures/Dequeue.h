@@ -1,7 +1,7 @@
 #ifndef S4_DEQUEUE_H
 #define S4_DEQUEUE_H
 
-#include "BidirectionalList.h"
+#include "data_structures/BidirectionalList.h"
 
 namespace bendryshev
 {

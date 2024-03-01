@@ -1,50 +1,51 @@
-#ifndef S1_QUEUE_H
-#define S1_QUEUE_H
+#ifndef S1_STACK_H
+#define S1_STACK_H
 
-#include "BidirectionalList.h"
+#include "data_structures/BidirectionalList.h"
 
 namespace bendryshev
 {
   template< typename T >
-  class Queue
+  class Stack
   {
   public:
+
     void push(const T& rhs);
-    const T& getNext() const;
+    const T& getTop() const;
     void drop();
     bool isEmpty() const;
+
   private:
     BidirectionalList< T > items_;
   };
 
   template< typename T >
-  void bendryshev::Queue< T >::push(const T& rhs)
+  void bendryshev::Stack< T >::push(const T& rhs)
   {
-    items_.pushBack(rhs);
+    items_.pushFront(rhs);
   }
-
   template< typename T >
-  const T& bendryshev::Queue< T >::getNext() const
+  const T& bendryshev::Stack< T >::getTop() const
   {
-    if (isEmpty())
+    if (items_.isEmpty())
     {
-      throw std::logic_error("Queue is empty");
+      throw std::logic_error("Stack is empty");
     }
     return items_.getFrontData();
   }
 
   template< typename T >
-  void bendryshev::Queue< T >::drop()
+  void bendryshev::Stack< T >::drop()
   {
     if (isEmpty())
     {
-      throw std::logic_error("Queue is empty");
+      throw std::logic_error("Stack is empty");
     }
     items_.popFront();
   }
 
   template< typename T >
-  bool bendryshev::Queue< T >::isEmpty() const
+  bool bendryshev::Stack< T >::isEmpty() const
   {
     return items_.isEmpty();
   }

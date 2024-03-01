@@ -3,8 +3,8 @@
 
 #include <string>
 #include <functional>
-#include "BidirectionalList.h"
-#include "TreeDictionary.h"
+#include "data_structures/BidirectionalList.h"
+#include "data_structures/TreeDictionary.h"
 
 namespace bendryshev
 {

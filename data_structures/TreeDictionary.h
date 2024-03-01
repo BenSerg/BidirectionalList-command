@@ -2,7 +2,7 @@
 #define S2_DICTIONARY_H
 
 #include <stdexcept>
-#include "BinarySearchTree.hpp"
+#include "data_structures/BinarySearchTree.hpp"
 
 namespace bendryshev
 {
